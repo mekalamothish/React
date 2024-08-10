@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
 const heading = React.createElement("h1",{id:"heading", xyz:"abc", class:"text-block text-xl text-center"},"Hello World from React!");
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const root1 = ReactDOM.createRoot(document.getElementById("root1"));
@@ -15,9 +18,9 @@ how to creat the this type structure
 /// to add more childrens h1, h2.we need to add in the array formate shown in below
 const parent = React.createElement("div",{id:"parent", class:"flex text-center w-full"}
     ,React.createElement("div",{id:"child",class:"w-full text-center"},
-    [React.createElement("h1",{class:"text-orange-500 text-lg"},"Hello Mothis")
-    ,React.createElement("h2",{class:"text-blue-500 text-md"},"Hello Mothis"),
-    React.createElement("h3",{class:"text-green-500 text-sm"},"Hello Mothis")]));
+    [React.createElement("h1",{class:"text-orange-500 text-lg"},"🚀 Hello Mothis🚀 ")
+    ,React.createElement("h2",{class:"text-blue-500 text-md"},"🚀 Hello Mothis🚀 "),
+    React.createElement("h3",{class:"text-green-500 text-sm"},"🚀 Hello Mothis🚀 ")]));
 root.render(parent);
 // above code is the core of react
 
