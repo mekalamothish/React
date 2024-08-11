@@ -1,29 +1,24 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("h1",{id:"heading", xyz:"abc", class:"text-block text-xl text-center"},"Hello World from React!");
+// React.CreateElemenmt ==> object ==> HtmlElement(render)
+const heading = React.createElement("h1",{id:"heading",class:"text-red-500 text-2xl text-center"},"Namaste React");
+
+// same line using the jsx 
+//jsx -HTML-like or XHL-like syntax
+const jsxheading = <h1 id="heading" className="text-3xl text-orange-500 text-center" tabIndex="1">Namste Mothish 🚀</h1>
+//for multilple lines
+const jsxheading1 = (<h1 id="heading" className="text-3xl text-orange-500 text-center" tabIndex="1">
+    Namste Mothish 🚀
+    </h1>)
+const TitleComponent = () => {
+    return <h1 id="heading" className="text-3xl text-red-500 text-center">Mothish you are learning</h1>;
+};
+const Heading = () => {
+    return (<div className="flex mx-auto flex-col"> <TitleComponent/> <h1 className="text-3xl text-orange-500 text-center">React Functional Component😊</h1></div>)
+};
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const root1 = ReactDOM.createRoot(document.getElementById("root1"));
-root1.render(heading);
-/*
-how to creat the this type structure
-<div id="parent">
-    <div id="child">
-        <h1></h1>
-    </div>
-</div>
- */
-// const parent  = React.createElement("div",{id:"parent"},React.createElement("div",{id:"child"},React.createElement("h1",{},"Hello Mothis")));
-
-/// to add more childrens h1, h2.we need to add in the array formate shown in below
-const parent = React.createElement("div",{id:"parent", class:"flex text-center w-full"}
-    ,React.createElement("div",{id:"child",class:"w-full text-center"},
-    [React.createElement("h1",{class:"text-orange-500 text-lg"},"🚀 Hello Mothis🚀 ")
-    ,React.createElement("h2",{class:"text-blue-500 text-md"},"🚀 Hello Mothis🚀 "),
-    React.createElement("h3",{class:"text-green-500 text-sm"},"🚀 Hello Mothis🚀 ")]));
-root.render(parent);
-// above code is the core of react
-
-
-// next we are going to use the morden React
-//1.JSX
+// root.render(heading);
+// root.render(HeadingComponent()); or
+root.render(<Heading/>) // this is the way to render the function componet
+//

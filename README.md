@@ -61,4 +61,21 @@ npx parcel build index.html
 
 browserList ? https://browserlist.dev
 
+what is script in package.json?
+///What is JSX?
 
+what is Babel? --> s came by the parcel
+==> babel help to transpail the jsx to the React.createElement() object then it render the html element 
+https://babeljs.io you can see the what is happeing in the babel how it is conveting
+while add th eattributes in the jsx syntax must be camel case (className,tabIndex)
+
+// React component 
+   1.class Based component - old way (uses the javascript class)
+   2.Functional componets - New way (uses the javascript function)
+     //root.render(<Heading/>) // this is the way to render the function componet
+//component composition ? it meas the rendering the one component in the other component.
+
+//amazing super power of the jsx {}  ==>in  this curly braces you can run the any type of javascript code in jsx code.
+
+//what is cross site script ?
+//jsx take care of the injection attacts.it is sanitaizing the data.z
